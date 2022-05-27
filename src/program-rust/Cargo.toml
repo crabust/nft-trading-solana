@@ -1,0 +1,33 @@
+[package]
+name = "solana-bpf-test"
+version = "0.0.1"
+description = "Example template program written in Rust"
+authors = ["Solana Maintainers <maintainers@solana.com>"]
+repository = "https://github.com/solana-labs/solana"
+license = "Apache-2.0"
+homepage = "https://solana.com/"
+edition = "2018"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+arrayref = "0.3.6"
+borsh = "0.7.1"
+borsh-derive = "0.8.1"
+solana-program = "=1.6.6"
+thiserror = "^1.0.24"
+
+# programs
+spl-associated-token-account = { version = "1.0.0", features = ["no-entrypoint"] }
+spl-math = { version = "0.1.0", features = ["no-entrypoint"] }
+spl-token = { version = "3.0.0", features = ["no-entrypoint"] }
+
+[dev-dependencies]
+rand = "0.7.0"
+solana-program-test = "=1.6.6"
+solana-sdk = "=1.6.6"
+
+[lib]
+name = "test"
+crate-type = ["cdylib", "lib"]

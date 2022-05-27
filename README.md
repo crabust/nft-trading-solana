@@ -1,1 +1,1 @@
-# nft-trading-solana
+# NFT Trading Solana

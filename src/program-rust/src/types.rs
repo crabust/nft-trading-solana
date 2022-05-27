@@ -1,0 +1,1 @@
+pub const DESTINATION_CHAIN_ADDRESS_LEN: usize = 20usize;
